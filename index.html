@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Media Factory — Privacy Policy</title>
+<meta name="description" content="Privacy policy of AI Media Factory, the private automation that publishes videos to the Próxima Era and Pausa para Pensar channels.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1b18; --muted: #5d5850; --line: #e4e0d8; --accent: #b4541c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #16150f; --fg: #ece8df; --muted: #a8a196; --line: #2f2c25; --accent: #f08a4b; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 80px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; }
+  p, li { color: var(--fg); }
+  .meta { color: var(--muted); margin: 0 0 28px; }
+  a { color: var(--accent); }
+  nav { margin: 0 0 32px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0; }
+  code { font-size: .92em; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy — AI Media Factory</h1>
+<p class="meta">Last updated: November 8, 2026 · <a href="#pt">Versão em português</a></p>
+
+<nav>Contact: <a href="mailto:fabio.hdb@gmail.com">fabio.hdb@gmail.com</a></nav>
+
+<h2>1. What AI Media Factory is</h2>
+<p>AI Media Factory is a private, self-hosted automation run by an individual creator, Fábio Damasceno. It publishes videos made by our own team to our own YouTube channels, <strong>Próxima Era</strong> and <strong>Pausa para Pensar</strong>, and to the matching Instagram accounts. It is not offered to the public. Its only users are the channel owners. A person reviews and approves every video before it is published.</p>
+
+<h2>2. YouTube API Services</h2>
+<p>AI Media Factory uses YouTube API Services. By using it, you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>We use the YouTube API Services to:</p>
+<ul>
+  <li>upload approved videos to our own channels, as private and with a scheduled publish time (<code>videos.insert</code>);</li>
+  <li>set thumbnails, captions and playlists on those uploads (<code>thumbnails.set</code>, <code>captions.insert</code>, <code>playlistItems.insert</code>);</li>
+  <li>read the public comments on source episodes we are authorized to cut, to find the moments viewers talk about most (<code>commentThreads.list</code>), and search for existing clips so we don't repeat them (<code>search.list</code>);</li>
+  <li>read the analytics of our own channels to plan new content (YouTube Analytics API, <code>reports.query</code>).</li>
+</ul>
+
+<h2>3. What data we access and store</h2>
+<ul>
+  <li><strong>Our own channels:</strong> metadata of our uploads (video ID, title, description, publish time) and aggregated analytics such as views and watch time.</li>
+  <li><strong>Public comments on source episodes:</strong> we read the comment text, like counts and the timestamps people mention, only to score moments of the episode. We do not save comment text, commenters' names, channel IDs or profile data to our database. The cut plan keeps only anonymous labels, such as "viewers mentioned this minute". The automation tool's execution logs may hold the raw API responses and are deleted automatically after 14 days.</li>
+  <li><strong>OAuth tokens:</strong> the authorization for our own channels is kept encrypted by the automation tool (n8n) on our own machine.</li>
+</ul>
+<p>We do not collect data from visitors or viewers. We do not use cookies or trackers, and we do not create user profiles.</p>
+
+<h2>4. How we use and share data</h2>
+<p>We use the data only to publish and plan content for our own channels. We do not sell, rent or share it with third parties, and we do not use it for advertising.</p>
+<p>To score moments and write titles, we send an AI model provider (Anthropic) short excerpts of the episode transcript, which are already public speech, and the text of up to four of the most-liked public comments. Commenters' names and IDs are never sent.</p>
+
+<h2>5. Storage, security and retention</h2>
+<p>Data is stored in a private PostgreSQL database on our own computer and is not exposed to the internet. Metadata and analytics of our own channels are kept while the channels exist and access is authorized. Data from other channels (public comments and search results) is used only during the planning run and is not kept beyond the 14-day execution logs.</p>
+
+<h2>6. Revoking access</h2>
+<p>The channel owner can revoke AI Media Factory's access to the YouTube account at any time on the Google security settings page: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. If you want data about you removed, email us and we will reply within 7 days.</p>
+
+<h2>7. Changes</h2>
+<p>If this policy changes, we will update this page and its "Last updated" date.</p>
+
+<hr>
+
+<section id="pt" lang="pt-BR">
+<h1>Política de Privacidade — AI Media Factory</h1>
+<p class="meta">Atualizada em 8 de novembro de 2026</p>
+
+<h2>1. O que é</h2>
+<p>A AI Media Factory é uma automação privada, rodando na máquina de um criador individual, Fábio Damasceno. Ela publica vídeos feitos pela nossa equipe nos nossos canais do YouTube (<strong>Próxima Era</strong> e <strong>Pausa para Pensar</strong>) e nas contas do Instagram correspondentes. Não é oferecida ao público: só os donos dos canais a usam. Uma pessoa revisa e aprova cada vídeo antes da publicação.</p>
+
+<h2>2. Serviços de API do YouTube</h2>
+<p>A AI Media Factory usa os Serviços de API do YouTube. Ao usá-la, você concorda com os <a href="https://www.youtube.com/t/terms">Termos de Serviço do YouTube</a>. O tratamento de dados pelo Google é descrito na <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>.</p>
+<p>Usamos esses serviços para:</p>
+<ul>
+  <li>enviar vídeos aprovados aos nossos canais, como privados e com horário de publicação agendado;</li>
+  <li>definir thumbnail, legenda e playlist desses vídeos;</li>
+  <li>ler os comentários públicos dos episódios que temos autorização para cortar, para achar os momentos mais citados, e buscar cortes que já existem, para não repeti-los;</li>
+  <li>ler as métricas dos nossos próprios canais para planejar novos conteúdos.</li>
+</ul>
+
+<h2>3. Dados acessados e guardados</h2>
+<ul>
+  <li><strong>Nossos canais:</strong> dados dos nossos envios (ID, título, descrição, horário) e métricas agregadas.</li>
+  <li><strong>Comentários públicos dos episódios de origem:</strong> lemos o texto, as curtidas e as minutagens citadas, só para pontuar os momentos do episódio. Não gravamos no banco o texto dos comentários, nem nomes, IDs de canal ou dados de perfil de quem comentou. O plano de cortes guarda só marcas anônimas, como "minuto citado pelo público". Os registros de execução da automação podem conter as respostas da API e são apagados sozinhos depois de 14 dias.</li>
+  <li><strong>Tokens OAuth:</strong> guardados criptografados pelo n8n, na nossa máquina.</li>
+</ul>
+<p>Não coletamos dados de visitantes ou espectadores. Não usamos cookies nem rastreadores, e não criamos perfis.</p>
+
+<h2>4. Uso e compartilhamento</h2>
+<p>Usamos os dados só para publicar e planejar o conteúdo dos nossos canais. Não vendemos, não alugamos e não compartilhamos esses dados, nem os usamos para publicidade. Para escolher momentos e escrever títulos, enviamos a um provedor de modelo de IA (Anthropic) trechos curtos da transcrição do episódio, que são falas já públicas, e o texto de até quatro dos comentários públicos mais curtidos. Nomes e IDs de quem comentou nunca são enviados.</p>
+
+<h2>5. Armazenamento, segurança e retenção</h2>
+<p>Os dados ficam num banco PostgreSQL privado, no nosso computador, sem acesso pela internet. Os dados e as métricas dos nossos canais ficam enquanto os canais existirem e o acesso estiver autorizado. Os dados de outros canais (comentários públicos e resultados de busca) são usados só durante o planejamento e não ficam além dos registros de execução de 14 dias.</p>
+
+<h2>6. Revogar o acesso</h2>
+<p>O dono do canal pode revogar o acesso da AI Media Factory à conta do YouTube a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Para pedir a remoção de dados sobre você, escreva para <a href="mailto:fabio.hdb@gmail.com">fabio.hdb@gmail.com</a>. Respondemos em até 7 dias.</p>
+
+<h2>7. Alterações</h2>
+<p>Se esta política mudar, atualizamos esta página e a data acima.</p>
+</section>
+
+</main>
+</body>
+</html>
